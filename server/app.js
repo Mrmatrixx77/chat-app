@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 
 
 io.on('connection' , (Socket) => {
-    console.log("connection");
+    // console.log("connection");
     Socket.on("send-name",(myname)=>{
       io.emit("send-name",myname);
     });
@@ -30,5 +30,8 @@ io.on('connection' , (Socket) => {
 
 
 httpServer.listen(8000,() =>{
-    console.log(`app is running on port 8000`)
+    // console.log(`app is running on port 8000`)
 });
+
+ export default app; 
+// module.exports = app;
